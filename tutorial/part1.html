@@ -48,7 +48,9 @@ function create() {
 
 function update() {
 	game.physics.arcade.collide(player, platforms);
+	cursors = game.input.keyboard.createCursorKeys();
 	player.body.velocity.x = 0;
+
 	if (cursors.left.isDown) {
 		player.body.velocity.x = -150;
 		player.animations.play('left');
